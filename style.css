@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #8ecae6, #ffffff);
+  color: #333;
+  text-align: center;
+}
+
+/* Header section */
+header {
+  background-color: #023047;
+  color: white;
+  padding: 30px;
+}
+
+header h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+/* Main card */
+.card {
+  background-color: white;
+  width: 70%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Father's Day icon */
+.tie {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: #1f3c88;
+  font-size: 30px;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Button */
+button {
+  background-color: #ffb703;
+  color: #222;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #fb8500;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #023047;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Makes the page look better on smaller screens */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 85%;
+  }
+
+  header h1 {
+    font-size: 35px;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
+}
