@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="style.css">
   <title>Happy Father's Day</title>
 
   <style>
@@ -41,7 +42,8 @@
       line-height: 1.5;
     }
 
-    button {
+    button,
+    a.nav-button {
       background-color: #ffb703;
       color: #333;
       border: none;
@@ -49,9 +51,12 @@
       font-size: 18px;
       border-radius: 8px;
       cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
     }
 
-    button:hover {
+    button:hover,
+    a.nav-button:hover {
       background-color: #fb8500;
       color: white;
     }
@@ -70,6 +75,7 @@
   <header>
     <h1>Happy Father's Day!</h1>
     <p>Celebrating the best dad ever</p>
+    <a class="nav-button" href="all-about-my-dad.html">You're the Best!</a>
   </header>
 
   <div class="card">
@@ -79,8 +85,6 @@
       You are kind, funny, helpful, and awesome.
       Thank you for always being there and making life better.
     </p>
-
-    <button>You're the Best!</button>
   </div>
 
   <footer>
