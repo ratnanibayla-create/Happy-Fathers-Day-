@@ -49,7 +49,8 @@ header p {
 }
 
 /* Button */
-button {
+button,
+a.nav-button {
   background-color: #ffb703;
   color: #222;
   border: none;
@@ -58,9 +59,12 @@ button {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 15px;
+  display: inline-block;
+  text-decoration: none;
 }
 
-button:hover {
+button:hover,
+a.nav-button:hover {
   background-color: #fb8500;
   color: white;
 }
