@@ -1,21 +1,31 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #8ecae6, #ffffff);
-  color: #333;
+  background: linear-gradient(to bottom, #ffe6f2, #ffffff);
+  color: #4a0333;
   text-align: center;
 }
 
 /* Header section */
 header {
-  background-color: #023047;
+  background-color: #001f3f;
   color: white;
   padding: 30px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 31, 63, 0.3);
+}
+
+.color-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-top: 0;
 }
 
 header h1 {
   font-size: 45px;
   margin-bottom: 10px;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.4);
 }
 
 header p {
@@ -51,7 +61,7 @@ header p {
 /* Button */
 button,
 a.nav-button {
-  background-color: #ffb703;
+  background-color: #87ceeb;
   color: #222;
   border: none;
   padding: 15px 25px;
@@ -65,7 +75,7 @@ a.nav-button {
 
 button:hover,
 a.nav-button:hover {
-  background-color: #fb8500;
+  background-color: #4a9eff;
   color: white;
 }
 
