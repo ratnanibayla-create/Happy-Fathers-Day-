@@ -70,19 +70,39 @@
   </style>
   <script>
     let colorState = 0;
-    function toggleColor() {
-      if (colorState === 0) {
-        document.body.style.background = 'linear-gradient(to bottom, #ff0000, #990000)';
-      } else if (colorState === 1) {
+
+    function setPageBackground(state, showConfetti = false) {
+      if (state === 0) {
+        document.body.style.background = 'linear-gradient(to bottom, #87ceeb, #b0e0e6)';
+      } else if (state === 1) {
         document.body.style.background = 'linear-gradient(to bottom, #00ff00, #007700)';
-      } else if (colorState === 2) {
+      } else if (state === 2) {
         document.body.style.background = 'linear-gradient(to bottom, #ff1493, #ff69b4)';
       } else {
         document.body.style.background = 'linear-gradient(to bottom, #ff69b4, #ff1493)';
-        rainConfetti();
+        if (showConfetti) {
+          rainConfetti();
+        }
       }
-      colorState = (colorState + 1) % 4;
     }
+
+    function toggleColor() {
+      const currentState = colorState;
+      setPageBackground(currentState, true);
+      localStorage.setItem('backgroundState', currentState);
+      colorState = (currentState + 1) % 4;
+    }
+
+    function syncBackground() {
+      const storedState = localStorage.getItem('backgroundState');
+      if (storedState !== null) {
+        const state = Number(storedState);
+        setPageBackground(state, false);
+        colorState = (state + 1) % 4;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', syncBackground);
 
     function rainConfetti() {
       const confettiCount = 200;
@@ -118,6 +138,7 @@
 </head>
 
 <body>
+  <div class="smileys">😊 😄 😁 😃</div>
 
   <header>
     <h1>Happy Father's Day!</h1>
